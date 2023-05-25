@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+
+    .container-carregamento {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+    }
+
+    .barra-carregamento {
+      width: 400px;
+      height: 40px;
+      background-color: yellow;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .progresso-carregamento {
+      height: 100%;
+      width: 0;
+      background-color: green;
+      animation: animacao-carregamento 2s linear infinite;
+    }
+
+    .texto-carregamento {
+      font-size: 20px;
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    @keyframes animacao-carregamento {
+      0% { width: 0; }
+      50% { width: 50%; }
+      100% { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container-carregamento">
+    <p class="texto-carregamento">Por favor aguarde...</p>
+    <div class="barra-carregamento">
+      <div class="progresso-carregamento"></div>
+    </div>
+  </div>
+</body>
+</html>
